@@ -57,6 +57,7 @@ public class pomodoroTimer extends JFrame{
         pomodoroTimer frame = new pomodoroTimer();
         frame.setContentPane(new pomodoroTimer().Main);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setName("Pomodoro Timer v1.0");
         frame.pack();
         frame.setVisible(true);
     }
