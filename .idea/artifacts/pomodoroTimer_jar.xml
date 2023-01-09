@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="pomodoroTimer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/pomodoroTimer_jar</output-path>
+    <root id="archive" name="pomodoroTimer.jar">
+      <element id="module-output" name="pomodoroTimer" />
+    </root>
+  </artifact>
+</component>
