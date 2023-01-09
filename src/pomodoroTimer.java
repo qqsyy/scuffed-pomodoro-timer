@@ -15,17 +15,20 @@ public class pomodoroTimer extends JFrame{
 
     public pomodoroTimer() {
         final Timer[] t = new Timer[1];
-        final int[] k = {1500};
+        final int[] k = {1499};
 
         t[0] = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String strVal = String.valueOf(k[0]);
-                pTimer.setText(strVal);
+                // convert into minutes and seconds
+                int m = k[0] % 3600 / 60;
+                int k2 = k[0] % 3600 % 60;
+                String mStr = String.valueOf(m);
+                String k2Str = String.valueOf(k2);
+                pTimer.setText(mStr + ":" + k2Str);
                 k[0]--;
                 if(k[0] == -1){
                     t[0].stop();
-
                 }
             }
         });
@@ -46,9 +49,8 @@ public class pomodoroTimer extends JFrame{
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                k[0] = 1500;
-                String strVal = String.valueOf(k[0]);
-                pTimer.setText(strVal);
+                k[0] = 1499;
+                pTimer.setText("25:00");
             }
         });
     }
