@@ -1,10 +1,16 @@
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ComponentAdapter;
-import java.util.Objects;
 import javax.swing.Timer;
+
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+
 public class pomodoroTimer extends JFrame{
+
+
     private JPanel Main;
     private JLabel Title;
     private JButton startButton;
@@ -12,6 +18,26 @@ public class pomodoroTimer extends JFrame{
     private JButton stopButton;
     private JLabel pTimer;
     private JButton resetButton;
+
+    public static void playMusic(String location){
+        try
+        {
+            File musicPath = new File(location);
+            if(musicPath.exists()) {
+                AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+                Clip clip = AudioSystem.getClip();
+                clip.open(audioInput);
+                clip.start();
+            }
+            else{
+                System.out.println("Can't find file");
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+    }
 
     public pomodoroTimer() {
         final Timer[] t = new Timer[1];
@@ -36,12 +62,14 @@ public class pomodoroTimer extends JFrame{
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                playMusic("C:\\Users\\Bondo\\OneDrive\\Desktop\\Intellij Projects\\pomodoroTimer\\src\\Audio\\Button.wav");
                 t[0].start();
             }
         });
         stopButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                playMusic("C:\\Users\\Bondo\\OneDrive\\Desktop\\Intellij Projects\\pomodoroTimer\\src\\Audio\\Button.wav");
                 t[0].stop();
             }
         });
@@ -49,6 +77,7 @@ public class pomodoroTimer extends JFrame{
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                playMusic("C:\\Users\\Bondo\\OneDrive\\Desktop\\Intellij Projects\\pomodoroTimer\\src\\Audio\\Button.wav");
                 k[0] = 1499;
                 pTimer.setText("25:00");
             }
