@@ -30,7 +30,7 @@ public class pomodoroTimer extends JFrame{
                 clip.start();
             }
             else{
-                System.out.println("Can't find file");
+                System.out.println("Can't find audio file");
             }
         }
         catch (Exception e)
@@ -86,7 +86,7 @@ public class pomodoroTimer extends JFrame{
         longBreakButton.addActionListener(e -> {
             k[0] = 899;
             pTimer.setText("15:00");
-            playMusic("C:\\Users\\Bondo\\OneDrive\\Desktop\\Intellij Projects\\pomodoroTimer\\src\\Audio\\Button.wav");
+            playMusic("Audio\\Button.wav");
         });
     }
 
