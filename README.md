@@ -2,7 +2,7 @@
 Super scuffed Pomodoro timer which was created utilising JFrame and Java's swing Timer
 
 # Installation/Downloads
-- [Download Here!](https://blueorcaz.github.io/scuffed-pomodoro-timer/Pomodoro.exe)
+- [Download Here!](https://blueorcaz.github.io/scuffed-pomodoro-timer/PomodoroTimer.exe)
 
 # Update Log
 ### v1.01
