@@ -2,7 +2,7 @@
 Super scuffed Pomodoro timer which was created utilising JFrame and Java's swing Timer
 
 # Usage
-- [Download Here!](https://blueorcaz.github.io/scuffed-pomodoro-timer/Pomodoro.exe)
+- [Download Here!](https://blueorcaz.github.io/scuffed-pomodoro-timer/Pomodoro%20Timer%201.03.exe)
 - Ignore the Windows Defender Smartscreen thing, this is not a virus!
 
 # Update Log
