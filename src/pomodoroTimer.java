@@ -86,7 +86,7 @@ public class pomodoroTimer extends JFrame{
         longBreakButton.addActionListener(e -> {
             k[0] = 899;
             pTimer.setText("15:00");
-            playMusic("Audio\\Button.wav");
+            playMusic("C:\\Users\\Bondo\\OneDrive\\Desktop\\Intellij Projects\\pomodoroTimer\\src\\Audio\\Button.wav");
         });
     }
 
